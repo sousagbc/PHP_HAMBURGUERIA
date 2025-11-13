@@ -48,9 +48,9 @@ Essas adições têm como objetivo transformar o site em uma plataforma completa
 
 Pedro Gusmão
 
-Vinicius
+Marcos Vinicius Pontes
 
-Pedro Meireles
+Pedro Henrique Meireles
 
 Gabriel Sousa
 
