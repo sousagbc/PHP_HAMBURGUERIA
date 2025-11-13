@@ -52,7 +52,7 @@ Marcos Vinicius Pontes
 
 Pedro Henrique Meireles
 
-Gabriel Sousa
+Gabriel Sousa Cavalcante Borges
 
 Lielson Marques
 
