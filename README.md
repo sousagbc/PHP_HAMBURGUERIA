@@ -48,13 +48,13 @@ Essas adições têm como objetivo transformar o site em uma plataforma completa
 
 Pedro Gusmão
 
-Gabriel Torres
+Vinicius
 
 Pedro Meireles
 
 Gabriel Sousa
 
-Caio Vinicius
+Lielson
 
 📚 Tecnologias Utilizadas
 
