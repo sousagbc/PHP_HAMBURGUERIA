@@ -54,7 +54,7 @@ Pedro Meireles
 
 Gabriel Sousa
 
-Lielson
+Lielson Marques
 
 📚 Tecnologias Utilizadas
 
