@@ -126,3 +126,28 @@ ins {
 #frase1 {
     font-size: 150%;
 }
+
+/* BLOCO DE TEXTO DAS SECTIONS */
+.texto-section {
+    flex-direction: column;
+    width: 600px;
+    max-width: 90vw;
+    text-align: justify;
+    font-size: 1.3em;
+    margin-left: 60px;
+}
+.texto-section2 {
+    padding: 20px;
+    border-radius: 16px;
+    width: 600px;
+    max-width: 90vw;
+    text-align: justify;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+#quem-somos {
+    border-radius: 20px;
+    margin: 0;
+    padding: 10px 0;
+}
