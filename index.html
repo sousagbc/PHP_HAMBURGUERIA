@@ -8,66 +8,90 @@
 
     <link rel="icon" href="images/logo_burgues_laranja_2 (1).png" type="image/png">
     <link rel="stylesheet" href="style.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- 🎥 VÍDEO DE FUNDO -->
+    <div class="video-bg">
+        <video autoplay muted loop playsinline>
+            <source src="images/videos/hamburguer.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- 🔝 HEADER -->
     <header>
         <img src="images/logo.png" alt="Logo O Burguês">
 
         <nav>
-            <a href="#logo">Bem-Vindo</a>
-            <a href="#frase1">Quem Somos</a>
+            <a href="#bem-vindo">Bem-Vindo</a>
+            <a href="#quem-somos">Quem Somos</a>
             <a href="#lojas">Lojas</a>
             <a href="cardapio.html" target="_blank">Cardápio</a>
-
             <a href="https://www.ifood.com.br/delivery/joao-pessoa-pb/o-burgues---burger-joao-pessoa-manaira/72015415-2e15-4496-92b7-003cc10161e1"
-                target="_blank">
+               target="_blank">
                 <button class="btn-pedido"><b>FAÇA SEU PEDIDO</b></button>
             </a>
         </nav>
-
     </header>
+
+    <!-- ✨ QUEM SOMOS -->
     <section id="quem-somos" class="section-flex2">
-    
-    <img class="img-right"
-        src="https://www.agerio.com.br/wp-content/uploads/2023/03/274245323_1371280946660092_8776269945200256239_n-1024x736.jpg"
-        alt="Equipe O Burguês">
+        <img class="img-right"
+             src="https://www.agerio.com.br/wp-content/uploads/2023/03/274245323_1371280946660092_8776269945200256239_n-1024x736.jpg"
+             alt="Equipe O Burguês">
 
-    <div class="texto-section2">
-        <h2 class="title-section">QUEM SOMOS</h2>
-
-        <p>
-            O Burguês não é apenas uma hamburgueria — é o resultado da paixão por comida,
-            criatividade e vontade de inovar. Nascida no Rio de Janeiro em fevereiro de 2017,
-            a marca surgiu com o objetivo de transformar o mercado de hambúrgueres artesanais.
-        </p>
-
-        <p>
-            O crescimento foi meteórico: em apenas cinco anos, o que começou como um sonho se tornou
-            uma potência nacional, totalizando 51 franquias abertas em vários estados.
-        </p>
-
-        <p>
-            Hoje, O Burguês é reconhecido como a <strong>maior hamburgueria delivery do Brasil</strong>,
-            com presença no Ceará, Bahia, Minas Gerais, Espírito Santo, São Paulo e Paraná. Nosso foco
-            sempre foi entregar qualidade, autenticidade e uma experiência única, tanto no delivery quanto
-            no atendimento presencial.
-        </p>
-    </div>
-
-</section>
-
-        <hr id="linha">
-    <div id="lojas">
-    <div class="video-bg">
-            <video autoplay muted loop playsinline>
-            <source src="images/videos/hamburguer.mp4" type="video/mp4">
-             </video>
+        <div class="texto-section2">
+            <h2>QUEM SOMOS</h2>
+            <p>
+                O Burguês nasceu no Rio de Janeiro em fevereiro de 2017 com uma missão simples:
+                reinventar a experiência do hambúrguer artesanal.  
+                Em poucos anos, o que começou como uma ideia ousada se transformou em um fenômeno:
+                <b>51 franquias abertas em apenas 5 anos</b>.  
+                Hoje somos a maior hamburgueria delivery do Brasil, com presença no Ceará, Bahia,
+                Minas Gerais, Espírito Santo, São Paulo e Paraná.  
+                Somos criatividade, qualidade e inovação — no atendimento físico e no delivery.
+            </p>
         </div>
-        </header>
-   </body>
-</html>
+    </section>
 
+    <hr id="linha">
+
+    <!-- 🏬 LOJAS (Placeholder) -->
+    <section id="lojas" class="section-flex">
+        <h2>Nossas Lojas</h2>
+    </section>
+
+    <!-- 🔻 FOOTER -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>O Burguês</h3>
+                <p>A maior hamburgueria delivery do Brasil.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <a href="#bem-vindo">Bem-Vindo</a>
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#lojas">Lojas</a>
+                <a href="cardapio.html" target="_blank">Cardápio</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>Email: contato@oburgues.com.br</p>
+                <p>Instagram: @oburgues</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 O Burguês • Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
