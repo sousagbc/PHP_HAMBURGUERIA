@@ -85,50 +85,76 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* -------------------- SEÇÕES -------------------- */
-.section-flex, .section-flex2 {
+/* -------------------- SEÇÃO QUEM SOMOS -------------------- */
+
+#quem-somos {
+    padding: 60px 0;
+    position: relative;
+    z-index: 5; /* aparece sobre o vídeo */
+}
+
+/* Layout lateral — imagem + texto */
+.section-flex2 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    min-height: 500px;
+    padding: 40px;
+    flex-wrap: wrap; /* para funcionar melhor no celular */
 }
 
-.section-flex2 {
-    flex-direction: row-reverse;
-}
-
-/* -------------------- TÍTULOS -------------------- */
-h1, h2, h3 {
-    text-align: center;
-    padding: 20px;
-}
-
-h3 {
-    font-size: 150%;
-}
-
-/* BLOCO DE TEXTO DAS SECTIONS */
-.texto-section {
-    flex-direction: column;
-    width: 600px;
-    max-width: 90vw;
-    text-align: justify;
-    font-size: 1.3em;
-    margin-left: 60px;
-}
-.texto-section2 {
-    padding: 20px;
-    border-radius: 16px;
-    width: 600px;
-    max-width: 90vw;
-    text-align: justify;
-    font-size: 1.2em;
-    color: #fff;
-}
-
-#quem-somos {
+/* Imagem do lado direito */
+.img-right {
+    width: 500px;
+    max-width: 90%;
     border-radius: 20px;
-    margin: 0;
-    padding: 10px 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transition: transform .3s;
+}
+
+.img-right:hover {
+    transform: scale(1.03);
+}
+
+/* BOX de texto */
+.texto-section2 {
+    width: 600px;
+    max-width: 90%;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+}
+
+/* Título */
+.texto-section2 h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Parágrafos */
+.texto-section2 p {
+    margin-bottom: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .section-flex2 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .texto-section2 {
+        text-align: center;
+    }
+
+    .texto-section2 h2 {
+        text-align: center;
+    }
 }
