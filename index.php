@@ -13,7 +13,7 @@ $pedidos = $stmt->fetchAll();
     <title>O Burguês - Hamburgueria Artesanal</title>
 
     <!-- NOTE: aqui estou usando o caminho do arquivo enviado no container -->
-    <link rel="icon" href="/mnt/data/logo.png" type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -31,14 +31,14 @@ $pedidos = $stmt->fetchAll();
     <div class="video-bg">
         <video autoplay muted loop playsinline>
             <!-- NOTE: caminho do vídeo no container (--troque para relativo em produção--) -->
-            <source src="/mnt/data/hamburguer.mp4" type="video/mp4">
+            <source src="images/videos/hamburguer.mp4" type="video/mp4">
         </video>
     </div>
 
     <!-- 🔝 HEADER -->
     <header>
         <!-- NOTE: caminho do logo no container (troque para relativo em produção) -->
-        <img src="/mnt/data/logo.png" alt="Logo O Burguês">
+        <img src="images/logo.png" alt="Logo O Burguês">
 
         <nav>
             <a href="#bem-vindo">Bem-Vindo</a>
@@ -97,7 +97,6 @@ $pedidos = $stmt->fetchAll();
                         <th>Quantidade</th>
                         <th>Status</th>
                         <th>Criado em</th>
-                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -109,11 +108,6 @@ $pedidos = $stmt->fetchAll();
                             <td><?= htmlspecialchars($p['quantidade']) ?></td>
                             <td><?= htmlspecialchars($p['status']) ?></td>
                             <td><?= htmlspecialchars($p['created_at']) ?></td>
-                            <td class="acoes">
-                                <a href="editar_pedido.php?id=<?= $p['id'] ?>">Editar</a>
-                                <a href="excluir_pedido.php?id=<?= $p['id'] ?>"
-                                   onclick="return confirm('Excluir pedido #<?= $p['id'] ?>?')">Excluir</a>
-                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
