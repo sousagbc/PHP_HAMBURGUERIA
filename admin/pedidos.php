@@ -21,7 +21,7 @@ $pedidos = $stmt->fetchAll();
 
 <h1>Pedidos</h1>
 
-<a class="btn" href="criar.php">+ Criar Pedido</a>
+<a class="btn" href="criar_pedidos.php">+ Criar Pedido</a>
 <br><br>
 
 <table>
@@ -44,8 +44,8 @@ $pedidos = $stmt->fetchAll();
             <td><?= $p['quantidade'] ?></td>
             <td><?= $p['status'] ?></td>
             <td>
-                <a class="btn" href="editar.php?id=<?= $p['id'] ?>">Editar</a>
-                <a class="btn" href="excluir.php?id=<?= $p['id'] ?>"
+                <a class="btn" href="editar_pedidos.php?id=<?= $p['id'] ?>">Editar</a>
+                <a class="btn" href="excluir_pedidos.php?id=<?= $p['id'] ?>"
                    onclick="return confirm('Excluir pedido #<?= $p['id'] ?>?')">Excluir</a>
             </td>
         </tr>
