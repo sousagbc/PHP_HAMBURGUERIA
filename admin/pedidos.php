@@ -10,9 +10,9 @@ $pedidos = $stmt->fetchAll();
     <meta charset="UTF-8">
     <title>Admin - Pedidos</title>
     <style>
-        body { font-family: Arial; padding:30px; }
+        body { font-family: Arial; padding:20px; }
         table { width:100%; border-collapse: collapse; }
-        th, td { padding:10px; border-bottom:1px solid #ccc; }
+        th, td { padding: 10px; border-bottom:1px solid #ccc;}
         a.btn { padding:6px 10px; background:#333; color:white; text-decoration:none; border-radius:4px; }
         a.btn:hover { background:#555; }
     </style>
