@@ -76,25 +76,39 @@ $pedidos = $stmt->fetchAll();
     <hr id="linha">
 
     <!-- 🏬 LOJAS (Placeholder) -->
-    <section id="lojas" class="section-flex">
-        <h2>Nossas Lojas</h2>
-    </section>
-      <p>Estamos presentes em 14 estados brasileiros, levando o sabor do O Burguês para você. Confira nossas lojas e venha nos visitar!</p>
-            <br><br><br><br>
-        </div> 
+    <section id="lojas">
+
+    <div class="lojas-container">
+
+        <!-- Caixa de texto, igual ao Quem Somos -->
+        <div class="texto-section2">
+            <h2>Nossas Lojas</h2>
+            <p>
+                Estamos presentes em 14 estados brasileiros, levando o sabor do O Burguês para você.
+                Confira nossas lojas e venha nos visitar!
+            </p>
+        </div>
+
+        <!-- Mapa à direita -->
         <div class="mapa-sobreposto">
             <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.144036746086!2d-34.83031049999999!3d-7.109301299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acddd3abfd7559%3A0x1bf87109ecd0a68b!2sO%20Burgu%C3%AAs%20Hamburgueria%20Cl%C3%A1ssica%20-%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1748216680679!5m2!1spt-BR!2sbr"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-        <nav class="button">
-            <a href="https://www.google.com/maps/place/O+Burgu%C3%AAs+Hamburgueria+Cl%C3%A1ssica+-+Jo%C3%A3o+Pessoa/@-7.1084709,-34.8269309,15z/data=!4m6!3m5!1s0x7acddd3abfd7559:0x1bf87109ecd0a68b!8m2!3d-7.1093013!4d-34.8303105!16s%2Fg%2F11t1dth1zc?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"><button><b>ver no mapa</b></button></a>
-        </nav>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.144036746086!2d-34.83031049999999!3d-7.109301299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acddd3abfd7559%3A0x1bf87109ecd0a68b!2sO%20Burgu%C3%AAs%20Hamburgueria%20Cl%C3%A1ssica%20-%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1748216680679!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <nav class="button">
+                <a href="https://www.google.com/maps/place/O+Burgu%C3%AAs+Hamburgueria+Cl%C3%A1ssica+-+Jo%C3%A3o+Pessoa">
+                    <button><b>ver no mapa</b></button>
+                </a>
+            </nav>
+        </div>
+
+    </div>
 
     <!-- =================== PEDIDOS (CRUD integrado) =================== -->
     <section id="pedidos" class="pedidos-section">

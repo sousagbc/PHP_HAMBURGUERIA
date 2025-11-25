@@ -130,6 +130,66 @@ nav a:hover {
     margin: 40px auto;
 }
 
+/* --------------------Lojas -------------------- */
+/* ---- Container geral ---- */
+.lojas-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+
+.texto-section2 {
+    width: 600px;
+    max-width: 90vw;
+    background: rgba(0,0,0,0.45);
+    padding: 35px;
+    border-radius: 16px;
+    color: white;
+    line-height: 1.6rem;
+}
+
+.texto-section2 h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+
+.mapa-sobreposto {
+    width: 520px;
+    height: 350px;
+    max-width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 18px rgba(0,0,0,0.6);
+    position: relative;
+}
+
+
+.mapa-sobreposto .button button {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 22px;
+    background: #ff6600;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.mapa-sobreposto .button button:hover {
+    background: #cc5200;
+    transform: scale(1.06);
+}
+
 /* -------------------- FOOTER -------------------- */
 footer {
     background: rgba(0, 0, 0, 0.75);
