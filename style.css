@@ -307,3 +307,68 @@ footer {
         padding: 20px 10px;
     }
 }
+
+
+/* ⭐ HERO */
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none; /* vídeo continua clicável */
+}
+
+.hero-content {
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    pointer-events: all;
+}
+
+.hero-content h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 20px 0;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+
+
+
+/* Ajuste do vídeo para aparecer atrás */
+.video-bg video {
+    z-index: -1;
+}
+
+
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #25D366; /* cor do WhatsApp */
+  font-size: 35px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+
+
