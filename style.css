@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-color: #E65100;
+    background-color: #1A1A1A;
     color: whitesmoke;
     padding-top: 180px
 }
@@ -64,6 +64,7 @@ nav {
 }
 
 nav a {
+    font-size: 18px;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -75,8 +76,26 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Botão Pedido */
+/* -------------------- BOTÕES 'FAÇA SEU PEDIDO' -------------------- */
+
 .btn-pedido {
+    
+    background-color: #ee1d23;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-pedido:hover {
+    background-color: #ee1d23;
+    transform: scale(1.1);
+}
+
+/* Botão Pedido */
+.btn-criar {
     
     text-align: center;
     font-weight: bold;
@@ -90,8 +109,8 @@ nav a:hover {
     transition: .3s;
 }
 
-.btn-pedido:hover {
-    background-color: #ee1d23;
+.btn-criar:hover {
+    background-color: #E65100;
     transform: scale(1.1);
 }
 
@@ -113,7 +132,7 @@ nav a:hover {
 /* -------------------- Bem-Vindo -------------------- */
 
 #bem-vindo {
-    margin-top: 160px;
+    margin-top: 20px;
 }
 
 .texto-section4 { 
@@ -161,7 +180,7 @@ nav a:hover {
 /* LOJAS */
 
 
-.section-flex2 {
+.section-flexlojas {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,21 +192,60 @@ nav a:hover {
 
 .texto-section3 {
     width: 45%;
-    min-width: 300px;
+    min-width: 200px;
     background: rgba(0,0,0,0.45);
-    padding: 25px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    padding-left:20px;
     border-radius: 16px;
     line-height: 1.6em;
     font-size: 1.2rem;
 }
 
 .map-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Espaço entre o mapa e o botão */
-    margin-top: 20px;
+    width: 500px;
+    height: 400px;
+    padding-right: 140px;
+    border-radius: 20px;
+    padding-bottom: 100px;
 }
+
+.map_button {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.map_button:hover {
+    color: white;
+    transform: none;
+}
+
+.botão_mapa {
+    
+    
+    background-color: black;
+    color: white;
+    padding: 10px 4px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    
+}
+
+.botão_mapa:hover {
+    background-color: #E65100;
+    transform: scale(1.1);
+}
+
+/* -------------------- FEEDBACKS -------------------- */
+
+
+
+
+
+
 
 
 
@@ -211,18 +269,20 @@ footer {
 
 .footer-col h3,
 .footer-col h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
     color: #FF8C00; /* Laranja do tema */
 }
 
 /* LINKS */
 .footer-col a {
+    font-size: 1.1rem;
     display: block;
     color: #fff;
     text-decoration: none;
     margin-bottom: 8px;
     transition: .3s;
+    
 }
 
 .footer-col a:hover {

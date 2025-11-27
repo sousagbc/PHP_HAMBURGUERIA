@@ -9,6 +9,7 @@ $pedidos = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Admin - Pedidos</title>
+    
     <style>
         body { font-family: Arial; padding:20px; }
         table { width:100%; border-collapse: collapse; }

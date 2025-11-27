@@ -19,17 +19,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Criar Pedido</title>
+  <title>O Burguês - Criar Pedido</title>
+  <link rel="icon" href="images/logo.png" type="png">
   <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
   <header>
-    <img src="/mnt/data/logo.png" alt="Logo O Burguês">
-    <nav>
-      <a href="index.php#pedidos">Voltar aos Pedidos</a>
-    </nav>
+  <img src="images/logo.png" alt="Voltar" class="btn-voltar" onclick="history.back()">
+    
   </header>
+  <style>
+    
+    .btn-voltar {
+    width: 150px;  /* tamanho da imagem */
+    height:auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.btn-voltar:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+  </style>
   <main style="padding-top:180px; text-align:center;">
     <div style="max-width:600px;margin:40px auto;background:rgba(0,0,0,0.45);padding:24px;border-radius:12px;">
       <h2>Criar Pedido</h2>

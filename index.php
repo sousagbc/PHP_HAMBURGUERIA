@@ -53,6 +53,26 @@ $pedidos = $stmt->fetchAll();
         </nav>
     </header>
 
+    <!-- 👋 BEM-VINDO -->
+
+    <section id="bem-vindo" class="section-flex2">
+       
+        <div class="texto-section3">
+            <h2>SEJA BEM-VINDO AO BURGUÊS</h2>
+            <p>
+                Descubra o sabor inigualável dos nossos hambúrgueres artesanais,
+                preparados com ingredientes frescos e selecionados para proporcionar
+                uma experiência gastronômica única. No O Burguês, cada mordida é
+                uma celebração do verdadeiro sabor do hambúrguer.
+            </p>
+        </div>  
+
+    </section>
+
+
+
+
+    <hr id="linha">
     <!-- ✨ QUEM SOMOS -->
     <section id="quem-somos" class="section-flex2">
         <img class="img-right"
@@ -78,19 +98,20 @@ $pedidos = $stmt->fetchAll();
     <!-- 🏬 LOJAS (Placeholder) -->
     <section id="lojas">
 
-    <div class="lojas-container">
+    <div class="section-flexlojas">
 
         <!-- Caixa de texto, igual ao Quem Somos -->
-        <div class="texto-section2">
+        <div class="texto-section3">
             <h2>Nossas Lojas</h2>
             <p>
-                Estamos presentes em 14 estados brasileiros, levando o sabor do O Burguês para você.
-                Confira nossas lojas e venha nos visitar!
+                 Atualmente contamos com nossa unidade principal em João Pessoa e já operamos como franquia,
+                levando o sabor do O Burguês para novas regiões. Estamos em expansão pelo Brasil, com novas unidades
+                chegando em breve. Enquanto isso, confira nossa loja principal:
             </p>
         </div>
 
-        <!-- Mapa à direita -->
-        <div class="mapa-sobreposto">
+        <!-- Mapa -->
+        <div class="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.144036746086!2d-34.83031049999999!3d-7.109301299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acddd3abfd7559%3A0x1bf87109ecd0a68b!2sO%20Burgu%C3%AAs%20Hamburgueria%20Cl%C3%A1ssica%20-%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1748216680679!5m2!1spt-BR!2sbr"
                 width="100%"
@@ -100,15 +121,48 @@ $pedidos = $stmt->fetchAll();
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-
-            <nav class="button">
-                <a href="https://www.google.com/maps/place/O+Burgu%C3%AAs+Hamburgueria+Cl%C3%A1ssica+-+Jo%C3%A3o+Pessoa">
-                    <button><b>ver no mapa</b></button>
-                </a>
+       
+        
+            <nav class="botão_mapa">
+        <a class="map_button" href="https://www.google.com/maps/place/O+Burgu%C3%AAs+Hamburgueria+Cl%C3%A1ssica+-+Jo%C3%A3o+Pessoa" target="_blank">
+        Ver no mapa
+        </a>
             </nav>
+           
         </div>
 
+                    <hr id="linha">
+
+
     </div>
+
+    <section id="Feedbacks">
+
+    <div class="section-flexfeedbacks">
+
+        <!-- Caixa de texto, igual ao Quem Somos -->
+        <div class="texto-section4">
+            <h2>Feedbacks</h2>
+           
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
 
     <!-- =================== PEDIDOS (CRUD integrado) =================== -->
     <section id="pedidos" class="pedidos-section">

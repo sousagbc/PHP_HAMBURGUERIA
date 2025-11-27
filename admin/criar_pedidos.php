@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Criar Pedido</title>
+    <link rel="icon" href="images_forphp/logo.png" type="png">
     <style>
         body { font-family:Arial; padding:30px; }
         input, button { padding:10px; width:300px; margin-bottom:10px; }
