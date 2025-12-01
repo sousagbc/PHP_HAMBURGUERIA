@@ -71,7 +71,10 @@ $pedidos = $stmt->fetchAll();
                 uma experiência gastronômica única. No O Burguês, cada mordida é
                 uma celebração do verdadeiro sabor do hambúrguer.
             </p>
-        </div>  
+        </div>
+        <div class="cadastro">
+            <a href="#quem-somos" class="btn-cadastro">CADASTRE-SE AQUI</a>
+        </div>
     </section>
 
     <hr id="linha">
@@ -102,7 +105,7 @@ $pedidos = $stmt->fetchAll();
     <section id="lojas">
         <div class="section-flexlojas">
             <!-- Caixa de texto -->
-            <div class="texto-section3">
+            <div class="texto-section4">
                 <h2>Nossas Lojas</h2>
                 <p>
                     Atualmente contamos com nossa unidade principal em João Pessoa e já operamos como franquia,
@@ -135,10 +138,8 @@ $pedidos = $stmt->fetchAll();
 
     <!-- 💬 FEEDBACKS -->
     <section id="Feedbacks">
-        <div class="section-flexfeedbacks">
-            <div class="texto-section4">
+        <div class="texto-section5">
                 <h2>Feedbacks</h2>
-            </div>
         </div>
     </section>
 
