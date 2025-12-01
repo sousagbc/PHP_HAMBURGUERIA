@@ -140,6 +140,33 @@ $pedidos = $stmt->fetchAll();
         </div>
     </section>
 
+
+<section id="feedbacks">
+   
+    
+    <div class="feedbacks-simples">
+        <!-- Card 1 -->
+        <div class="card-feedback">
+            <h4>Lucas Fonseca</h4>
+            <div class="estrelas">★★★★★</div>
+            <p>"Muito top, uma das melhores hamburgueria aqui em João Pessoa é vocês !"</p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card-feedback">
+            <h4>Francisco Galbin</h4>
+            <div class="estrelas">★★★★★</div>
+            <p>"Já pedi tanto no delivery quanto consumi no presencial, muito bom! Hambúrguer artesanal de primeira."</p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card-feedback">
+            <h4>Paula Suênia</h4>
+            <div class="estrelas">★★★★★</div>
+            <p>"Melhor hambúrguer do mundo 😍. Atendimento perfeito e o chef de cozinha está de parabéns."</p>
+        </div>
+    </div>
+</section>
     <!-- =================== PEDIDOS (CRUD integrado) =================== -->
     <section id="pedidos" class="pedidos-section">
         <h2>PEDIDOS</h2>
