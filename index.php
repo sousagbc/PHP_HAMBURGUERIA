@@ -103,7 +103,7 @@ $pedidos = $stmt->fetchAll();
         <div class="section-flexlojas">
             <!-- Caixa de texto -->
             <div class="texto-section4">
-                <h2>Nossas Lojas</h2>
+                <h2>NOSSAS LOJAS</h2>
                 <p>
                     Atualmente contamos com nossa unidade principal em João Pessoa e já operamos como franquia,
                     levando o sabor do O Burguês para novas regiões. Estamos em expansão pelo Brasil, com novas unidades
@@ -142,7 +142,7 @@ $pedidos = $stmt->fetchAll();
 
     <!-- =================== PEDIDOS (CRUD integrado) =================== -->
     <section id="pedidos" class="pedidos-section">
-        <h2>Pedidos</h2>
+        <h2>PEDIDOS</h2>
         <a class="btn-criar" href="criar_pedido.php">+ Criar Novo Pedido</a>
 
         <?php if (count($pedidos) === 0): ?>

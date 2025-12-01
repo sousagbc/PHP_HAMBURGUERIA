@@ -1,16 +1,18 @@
-
+/* ================= RESET & BASE ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
-    color: #333;
-  }
-  
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1A1A1A; /* Fundo Dark */
+    color: whitesmoke;
+    padding-top: 100px; /* Espaço para o header fixo */
+}
+
+/* ================= HEADER (Cópia do estilo principal) ================= */
 #main-header {
     position: fixed;
     top: 0;
@@ -18,11 +20,19 @@
     width: 100%;
     height: 90px;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(15px);
+    background: rgba(10, 10, 10, 0.95);
     border-bottom: 1px solid rgba(255, 140, 0, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
+}
+/* Logo */
+.logo-area img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-area img:hover {
+    transform: rotate(-5deg) scale(1.05);
 }
 
 .header-container {
@@ -35,18 +45,6 @@
     padding: 0 20px;
 }
 
-/* Logo */
-.logo-area img {
-    height: 60px;
-    width: auto;
-    transition: transform 0.3s;
-}
-
-.logo-area img:hover {
-    transform: rotate(-5deg) scale(1.05);
-}
-
-/* Navegação Central */
 .nav-menu {
     display: flex;
     gap: 30px;
@@ -55,36 +53,14 @@
 .nav-item {
     color: #fff;
     text-decoration: none;
-    font-size: 0.95rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    padding: 5px 0;
+    font-size: 0.9rem;
     transition: color 0.3s;
 }
 
-/* Efeito de sublinhado animado */
-.nav-item::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #FF8C00;
-    transition: width 0.3s;
-}
+.nav-item:hover { color: #FF8C00; }
 
-.nav-item:hover {
-    color: #FF8C00;
-}
-
-.nav-item:hover::after {
-    width: 100%;
-}
-
-/* Botão de Pedido (CTA) */
 .btn-delivery {
     background: linear-gradient(45deg, #ee1d23, #FF8C00);
     color: white;
@@ -92,130 +68,114 @@
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
     box-shadow: 0 0 15px rgba(238, 29, 35, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-delivery:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(255, 140, 0, 0.6);
-}
-
-/* Logo */
-.logo-area img {
-    height: 60px;
-    width: auto;
     transition: transform 0.3s;
 }
+.btn-delivery:hover { transform: translateY(-2px); }
 
-.logo-area img:hover {
-    transform: rotate(-5deg) scale(1.05);
+/* ================= SEÇÕES DO CARDÁPIO ================= */
+#cardapio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-  /* Seção do cardápio */
-  #cardapio > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px 20px;
-    background-color: #f2590c;
-  }
-  
-  /* Blocos dos hambúrgueres */
-  #cardapio > div > div {
-    background: #ffffff;
-    color: #000000;
-    border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  #cardapio > div > div:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Imagens dos hambúrgueres */
-  #cardapio img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  /* Títulos */
-  #cardapio h3 {
-    margin-bottom: 10px;
-    color: #f2590c;
-  }
-  
-  /* Descrições */
-  #cardapio p {
-    font-size: 0.95em;
-    line-height: 1.4;
-    margin-bottom: 15px;
-  }
-  
-  /* Preço */
-  #cardapio strong {
-    font-size: 1.1em;
-    color: #000000;
-  }
-  /* Rodapé */
-  footer{
-     color: whitesmoke;
-     font-family: 'Montserrat', sans-serif;
-     text-align: center; 
-     background-color: black;
-     margin-top: auto;
-     width: 100%;
-     box-sizing: border-box;
-     padding: 20px 0;
-  }
-  footer a {
-    color: whitesmoke;
-    text-decoration: none;
-    margin: 0 15px;
-  }
-  h5{
-     font-size: 80%;
-  }
-  /* style.html */
-  #foto{
-     width: 100%;
-     border-radius: 10px;
-  }
-  #corpo{
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 30px; 
-    padding: 20px;
-  }
-  #hamburguer{
-    background: white;
-    color: black;
-    border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-  }
-  
-  /*(Bebidas e Acompanhamentos)*/
-  #cardapio h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6em;
-    background-color: #000000;
+/* Títulos das Seções (Hambúrgueres, Bebidas...) */
+#cardapio h2 {
+    font-size: 2rem;
+    color: #FF8C00; /* Laranja Neon */
     text-align: center;
-  }
-  #main-footer {
+    margin: 50px 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Linha decorativa embaixo do título */
+#cardapio h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ee1d23;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Container dos Cards */
+#corpo, #corpo-bebidas, #corpo-acompanhamentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid Responsivo */
+    gap: 30px;
+    justify-items: center;
+    padding-bottom: 40px;
+}
+
+/* ================= CARDS DOS PRODUTOS ================= */
+.hamburguer {
+    background: #252525; /* Cartão Escuro */
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 0; /* Remove padding interno para a foto encostar na borda */
+    width: 100%;
+    max-width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito Hover no Card */
+.hamburguer:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: #FF8C00; /* Borda fica laranja */
+}
+
+/* Imagem do Produto */
+.hamburguer .foto {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 4px solid #ee1d23; /* Detalhe visual */
+    transition: transform 0.5s ease;
+}
+
+.hamburguer:hover .foto {
+    transform: scale(1.05); /* Zoom suave na foto */
+}
+
+/* Conteúdo do Card */
+.hamburguer h3 {
+    padding: 20px 20px 5px;
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0;
+}
+
+.hamburguer p {
+    padding: 0 20px;
+    color: #bbb; /* Texto cinza claro */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1; /* Empurra o preço para baixo */
+    margin-bottom: 20px;
+}
+
+.hamburguer strong {
+    display: block;
+    padding: 15px 20px;
+    background: #151515;
+    color: #25D366; /* Verde Dinheiro (ou use laranja #FF8C00) */
+    font-size: 1.3rem;
+    text-align: right;
+    border-top: 1px solid #333;
+}
+
+/* ================= FOOTER ================= */
+#main-footer {
     background-color: #0f0f0f;
     border-top: 4px solid #FF8C00;
     padding-top: 60px;
@@ -302,111 +262,10 @@
     font-weight: bold;
 }
 
-  /*faça seu pedido*/
-  button{
-     text-decoration: none;
-     background-color: black;
-     color: #E65100;
-     border-radius: 25px;
-     padding: 20px;
-     font-family: 'Montserrat', sans-serif;
-     font-size: 190%;
-     margin: 0;
-     cursor: pointer;
-     text-align: center;
-     transition: background 0.2s;
-  
-  }
-  button:hover{
-    background-color: black;
-     transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  /* -------------------- RESPONSIVIDADE -------------------- */
-@media (max-width: 900px) {
-    .section-flex2 {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .texto-section2 {
-        text-align: center;
-    }
-
-    .texto-section2 h2 {
-        text-align: center;
-    }
-}
-
+/* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
-    .header-container {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        height: auto;
-        padding: 15px;
-    }
-
-    .nav-menu {
-        display: flex;
-        gap: 15px;
-        font-size: 0.8rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-column h4 {
-        border-left: none;
-        border-bottom: 2px solid #FF8C00;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .texto-section3 {
-        margin-left: 0;
-        width: 100%;
-    }
+    .header-container { flex-direction: column; gap: 10px; padding: 15px; }
+    .nav-menu { gap: 15px; font-size: 0.8rem; }
+    #main-header { height: auto; position: relative; } /* Header solto no mobile */
+    body { padding-top: 0; }
 }
-
-@media (max-width: 600px) {
-    .section-flex, .section-flex2 {
-        padding: 20px 10px;
-    }
-
-    .texto-section2,
-    .texto-section3,
-    .texto-section4 {
-        width: 100%;
-        margin: 0;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .nav-menu {
-        gap: 10px;
-        font-size: 0.7rem;
-    }
-}
-
-  
