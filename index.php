@@ -36,27 +36,33 @@ $pedidos = $stmt->fetchAll();
     </div>
 
     <!-- 🔝 HEADER -->
-    <header>
-        <!-- NOTE: caminho do logo no container (troque para relativo em produção) -->
-        <img src="images/logo.png" alt="Logo O Burguês">
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="#">
+                    <img src="images/logo.png" alt="Logo O Burguês">
+                </a>
+            </div>
 
-        <nav>
-            <a href="#bem-vindo">Bem-Vindo</a>
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#lojas">Lojas</a>
-            <a href="#pedidos">Pedidos</a>
-            <a href="cardapio.html" target="_blank">Cardápio</a>
-            <a href="https://www.ifood.com.br/delivery/joao-pessoa-pb/o-burgues---burger-joao-pessoa-manaira/72015415-2e15-4496-92b7-003cc10161e1"
-               target="_blank">
-                <button class="btn-pedido"><b>FAÇA SEU PEDIDO</b></button>
-            </a>
-        </nav>
+            <nav class="nav-menu">
+                <a href="#bem-vindo" class="nav-item">Início</a>
+                <a href="#quem-somos" class="nav-item">Quem Somos</a>
+                <a href="#lojas" class="nav-item">Lojas</a>
+                <a href="#pedidos" class="nav-item">Pedidos</a>
+                <a href="cardapio.html" target="_blank" class="nav-item">Cardápio</a>
+            </nav>
+
+            <div class="cta-area">
+                <a href="https://www.ifood.com.br/delivery/joao-pessoa-pb/o-burgues---burger-joao-pessoa-manaira/72015415-2e15-4496-92b7-003cc10161e1" 
+                   target="_blank" class="btn-delivery">
+                    <i class="fa-solid fa-motorcycle"></i> PEÇA AGORA
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- 👋 BEM-VINDO -->
-
     <section id="bem-vindo" class="section-flex2">
-       
         <div class="texto-section3">
             <h2>SEJA BEM-VINDO AO BURGUÊS</h2>
             <p>
@@ -66,13 +72,10 @@ $pedidos = $stmt->fetchAll();
                 uma celebração do verdadeiro sabor do hambúrguer.
             </p>
         </div>  
-
     </section>
 
-
-
-
     <hr id="linha">
+
     <!-- ✨ QUEM SOMOS -->
     <section id="quem-somos" class="section-flex2">
         <img class="img-right"
@@ -95,96 +98,49 @@ $pedidos = $stmt->fetchAll();
 
     <hr id="linha">
 
-    <!-- 🏬 LOJAS (Placeholder) -->
+    <!-- 🏬 LOJAS -->
     <section id="lojas">
+        <div class="section-flexlojas">
+            <!-- Caixa de texto -->
+            <div class="texto-section3">
+                <h2>Nossas Lojas</h2>
+                <p>
+                    Atualmente contamos com nossa unidade principal em João Pessoa e já operamos como franquia,
+                    levando o sabor do O Burguês para novas regiões. Estamos em expansão pelo Brasil, com novas unidades
+                    chegando em breve. Enquanto isso, confira nossa loja principal:
+                </p>
+            </div>
 
-    <div class="section-flexlojas">
-
-        <!-- Caixa de texto, igual ao Quem Somos -->
-        <div class="texto-section3">
-            <h2>Nossas Lojas</h2>
-            <p>
-                 Atualmente contamos com nossa unidade principal em João Pessoa e já operamos como franquia,
-                levando o sabor do O Burguês para novas regiões. Estamos em expansão pelo Brasil, com novas unidades
-                chegando em breve. Enquanto isso, confira nossa loja principal:
-            </p>
+            <!-- Mapa à direita -->
+            <div class="map-card">
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.144036746086!2d-34.83031049999999!3d-7.109301299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acddd3abfd7559%3A0x1bf87109ecd0a68b!2sO%20Burgu%C3%AAs%20Hamburgueria%20Cl%C3%A1ssica%20-%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1748216680679!5m2!1spt-BR!2sbr"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <a 
+                    href="https://www.google.com/maps/place/O+Burgu%C3%AAs+Hamburgueria+Cl%C3%A1ssica+-+Jo%C3%A3o+Pessoa/"
+                    target="_blank" 
+                    class="btn-mapa">
+                    Ver rota no mapa
+                </a>
+            </div>
         </div>
 
-<<<<<<< HEAD
-        <!-- Mapa -->
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.144036746086!2d-34.83031049999999!3d-7.109301299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acddd3abfd7559%3A0x1bf87109ecd0a68b!2sO%20Burgu%C3%AAs%20Hamburgueria%20Cl%C3%A1ssica%20-%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1748216680679!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="100%"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-       
-        
-            <nav class="botão_mapa">
-        <a class="map_button" href="https://www.google.com/maps/place/O+Burgu%C3%AAs+Hamburgueria+Cl%C3%A1ssica+-+Jo%C3%A3o+Pessoa" target="_blank">
-        Ver no mapa
-        </a>
-            </nav>
-           
-        </div>
-=======
-        <!-- Mapa à direita -->
-        <div class="map-card">
-    <div class="map-wrapper">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.144036746086!2d-34.83031049999999!3d-7.109301299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acddd3abfd7559%3A0x1bf87109ecd0a68b!2sO%20Burgu%C3%AAs%20Hamburgueria%20Cl%C3%A1ssica%20-%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1748216680679!5m2!1spt-BR!2sbr"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-
-    <a 
-      href="https://www.google.com/maps/place/O+Burgu%C3%AAs+Hamburgueria+Cl%C3%A1ssica+-+Jo%C3%A3o+Pessoa/"
-      target="_blank" 
-      class="btn-mapa">
-      Ver rota no mapa
-    </a>
-</div>
-
->>>>>>> bc0ff6072d6d2bbb82fe1a4cc3cca5473c4c703b
-
-                    <hr id="linha">
-
-
-    </div>
-
-    <section id="Feedbacks">
-
-    <div class="section-flexfeedbacks">
-
-        <!-- Caixa de texto, igual ao Quem Somos -->
-        <div class="texto-section4">
-            <h2>Feedbacks</h2>
-           
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
+        <hr id="linha">
     </section>
 
-
-
-
-
+    <!-- 💬 FEEDBACKS -->
+    <section id="Feedbacks">
+        <div class="section-flexfeedbacks">
+            <div class="texto-section4">
+                <h2>Feedbacks</h2>
+            </div>
+        </div>
+    </section>
 
     <!-- =================== PEDIDOS (CRUD integrado) =================== -->
     <section id="pedidos" class="pedidos-section">
@@ -221,37 +177,37 @@ $pedidos = $stmt->fetchAll();
         <?php endif; ?>
     </section>
 
-    
-
-
     <!-- 🔻 FOOTER -->
-    <footer>
-        <div class="footer-container">
-
-            <div class="footer-col">
-                <h3>O Burguês</h3>
-                <p>A maior hamburgueria delivery do Brasil.</p>
+    <footer id="main-footer">
+        <div class="footer-content">
+            <div class="footer-column brand-col">
+                <img src="images/logo.png" alt="Logo Rodapé" class="footer-logo">
+                <p>O sabor que conquistou o Brasil. Hambúrguer artesanal feito de verdade.</p>
             </div>
 
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <a href="#bem-vindo">Bem-Vindo</a>
-                <a href="#quem-somos">Quem Somos</a>
-                <a href="#lojas">Lojas</a>
-                <a href="#pedidos">Pedidos</a>
-                <a href="cardapio.html" target="_blank">Cardápio</a>
+            <div class="footer-column links-col">
+                <h4>NAVEGAÇÃO</h4>
+                <ul>
+                    <li><a href="#bem-vindo">Início</a></li>
+                    <li><a href="#cardapio">Nosso Cardápio</a></li>
+                    <li><a href="#lojas">Encontre uma Loja</a></li>
+                    <li><a href="admin/indexadm.php">Acesso Restrito</a></li>
+                </ul>
             </div>
 
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <p>Email: contato@oburgues.com.br</p>
-                <p>Instagram: @oburgues</p>
+            <div class="footer-column info-col">
+                <h4>FUNCIONAMENTO</h4>
+                <ul class="info-list">
+                    <li><i class="fa-regular fa-clock"></i> Seg - Dom: 18h às 23h</li>
+                    <li><i class="fa-solid fa-location-dot"></i> João Pessoa - PB</li>
+                    <li><i class="fa-solid fa-envelope"></i> contato@oburgues.com.br</li>
+                </ul>
             </div>
-
         </div>
 
         <div class="footer-bottom">
-            © 2025 O Burguês • Todos os direitos reservados.
+            <p>&copy; 2025 O Burguês. Todos os direitos reservados.</p>
+            <p class="dev-credits">Desenvolvido por <span>Grupo TechBurger</span></p>
         </div>
     </footer>
 
