@@ -367,31 +367,6 @@ body {
     opacity: 0.8;
 }
 
-/* Ícones Sociais Redondos */
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: #222;
-    color: #fff;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    background: #FF8C00;
-    color: #000;
-    transform: translateY(-3px);
-}
-
 /* Listas de Links e Info */
 .footer-column ul {
     list-style: none;

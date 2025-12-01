@@ -51,11 +51,8 @@ $pedidos = $stmt->fetchAll();
                 <a href="#pedidos" class="nav-item">Pedidos</a>
                 <a href="cardapio.php" target="_blank" class="nav-item">Cardápio</a>
             </nav>
-
-            <div class="cta-area">
-                <a href="https://www.ifood.com.br/delivery/joao-pessoa-pb/o-burgues---burger-joao-pessoa-manaira/72015415-2e15-4496-92b7-003cc10161e1" 
-                   target="_blank" class="btn-delivery">
-                    <i class="fa-solid fa-motorcycle"></i> PEÇA AGORA
+            
+            <div></div>
                 </a>
             </div>
         </div>

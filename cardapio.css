@@ -11,26 +11,111 @@
     color: #333;
   }
   
-  /* Cabeçalho */
-  header {
-    background-color: #000000;
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo-area img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-area img:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+/* Navegação Central */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+/* Efeito de sublinhado animado */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF8C00;
+    transition: width 0.3s;
+}
+
+.nav-item:hover {
+    color: #FF8C00;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* Botão de Pedido (CTA) */
+.btn-delivery {
+    background: linear-gradient(45deg, #ee1d23, #FF8C00);
     color: white;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 4px solid #f2590c;
-  }
-  
-  header img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .cardapio-boasvindas h1 {
-    font-size: 1.8em;
-    color: #ffffff;
-  }
-  
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 0 15px rgba(238, 29, 35, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-delivery:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.6);
+}
+
+/* Logo */
+.logo-area img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-area img:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
   /* Seção do cardápio */
   #cardapio > div {
     display: flex;
@@ -130,13 +215,93 @@
     background-color: #000000;
     text-align: center;
   }
-  #footer {
-    font-size: 1em;
+  #main-footer {
+    background-color: #0f0f0f;
+    border-top: 4px solid #FF8C00;
+    padding-top: 60px;
+    margin-top: 80px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px 40px;
+}
+
+/* Títulos das colunas */
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-left: 3px solid #FF8C00;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Coluna da Marca */
+.brand-col p {
+    margin: 15px 0;
     line-height: 1.5;
-    margin-bottom: 1em;
-    color: inherit;
-    font-family: inherit;
-  }
+}
+
+.footer-logo {
+    height: 50px;
+    opacity: 0.8;
+}
+
+/* Listas de Links e Info */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #FF8C00;
+    padding-left: 5px;
+}
+
+/* Ícones na lista de info */
+.info-list i {
+    color: #FF8C00;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Barra Inferior */
+.footer-bottom {
+    background: #050505;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.dev-credits span {
+    color: #FF8C00;
+    font-weight: bold;
+}
+
   /*faça seu pedido*/
   button{
      text-decoration: none;
@@ -160,4 +325,88 @@
     text-decoration: none;
     color: inherit;
   }
+  /* -------------------- RESPONSIVIDADE -------------------- */
+@media (max-width: 900px) {
+    .section-flex2 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .texto-section2 {
+        text-align: center;
+    }
+
+    .texto-section2 h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column h4 {
+        border-left: none;
+        border-bottom: 2px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .texto-section3 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-flex, .section-flex2 {
+        padding: 20px 10px;
+    }
+
+    .texto-section2,
+    .texto-section3,
+    .texto-section4 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: 10px;
+        font-size: 0.7rem;
+    }
+}
+
   
