@@ -49,7 +49,7 @@ $pedidos = $stmt->fetchAll();
                 <a href="#quem-somos" class="nav-item">Quem Somos</a>
                 <a href="#lojas" class="nav-item">Lojas</a>
                 <a href="#pedidos" class="nav-item">Pedidos</a>
-                <a href="cardapio.html" target="_blank" class="nav-item">Cardápio</a>
+                <a href="cardapio.php" target="_blank" class="nav-item">Cardápio</a>
             </nav>
 
             <div class="cta-area">
@@ -189,7 +189,7 @@ $pedidos = $stmt->fetchAll();
                 <h4>NAVEGAÇÃO</h4>
                 <ul>
                     <li><a href="#bem-vindo">Início</a></li>
-                    <li><a href="#cardapio">Nosso Cardápio</a></li>
+                    <li><a href="#cardapio.php">Nosso Cardápio</a></li>
                     <li><a href="#lojas">Encontre uma Loja</a></li>
                     <li><a href="admin/indexadm.php">Acesso Restrito</a></li>
                 </ul>
