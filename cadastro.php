@@ -40,3 +40,80 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>O Burguês - Cadastro</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="pedidos.css"> 
+</head>
+
+<body>
+
+  <header id="main-header">
+      <div class="header-container">
+          <div class="logo-area">
+              <a href="index.php">
+                  <img src="images/logo.png" alt="Logo O Burguês">
+              </a>
+          </div>
+          <nav class="nav-menu">
+              <a href="index.php" class="nav-item">Voltar ao Início</a>
+          </nav>
+      </div>
+  </header>
+
+  <main style="padding-top: 40px; min-height: 80vh;">
+    
+    <div class="form-container">
+      <h2><i class="fa-solid fa-user-plus"></i> Criar Conta</h2>
+      
+      <?php if (!empty($erro)): ?>
+          <div class="erro-msg" style="border-color: red; color: #ffcccc; background: rgba(255,0,0,0.2);"><?= $erro ?></div>
+      <?php endif; ?>
+
+      <?php if (!empty($sucesso)): ?>
+          <div class="erro-msg" style="border-color: green; color: #ccffcc; background: rgba(0,255,0,0.2);"><?= $sucesso ?></div>
+      <?php else: ?>
+
+      <form method="post">
+        
+        <label for="nome">Nome Completo *</label>
+        <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+
+        <label for="email">E-mail *</label>
+        <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+
+        <label for="telefone">Telefone / WhatsApp</label>
+        <input type="text" name="telefone" id="telefone" placeholder="(XX) 9XXXX-XXXX">
+
+        <label for="endereco">Endereço de Entrega</label>
+        <textarea name="endereco" id="endereco" rows="2" placeholder="Rua, Número, Bairro..."></textarea>
+
+        <label for="senha">Senha *</label>
+        <input type="password" name="senha" id="senha" placeholder="Crie uma senha segura" required>
+
+        <button type="submit">CADASTRAR</button>
+      </form>
+      
+      <?php endif; ?>
+
+      <a href="index.php" class="btn-voltar-link"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+    </div>
+
+  </main>
+
+  <footer id="main-footer">
+      <div class="footer-bottom">
+          <p>&copy; 2025 O Burguês. Todos os direitos reservados.</p>
+      </div>
+  </footer>
+
+</body>
+</html>
