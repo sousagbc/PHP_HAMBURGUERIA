@@ -1,0 +1,721 @@
+/* -------------------- RESET -------------------- */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #1A1A1A;
+    color: whitesmoke;
+    padding-top: 90px;
+}
+
+/* -------------------- VÍDEO DE FUNDO -------------------- */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(45%);
+}
+
+/* ================== HEADER MODERNO ================== */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo-area img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-area img:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+/* Navegação Central */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+/* Efeito de sublinhado animado */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF8C00;
+    transition: width 0.3s;
+}
+
+.nav-item:hover {
+    color: #FF8C00;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* Botão de Pedido (CTA) */
+.btn-delivery {
+    background: linear-gradient(45deg, #ee1d23, #FF8C00);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 0 15px rgba(238, 29, 35, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-delivery:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.6);
+}
+
+/* -------------------- BOTÕES -------------------- */
+.btn-pedido {
+    background-color: #ee1d23;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-pedido:hover {
+    background-color: #ee1d23;
+    transform: scale(1.1);
+}
+
+.btn-criar {
+    text-align: center;
+    font-weight: bold;
+    z-index: 10000;
+    background-color: #ee1d23;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-criar:hover {
+    background-color: #E65100;
+    transform: scale(1.1);
+}
+
+/* -------------------- SEÇÕES -------------------- */
+.section-flex, .section-flex2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    min-height: 500px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.section-flex2 {
+    flex-direction: row-reverse;
+}
+
+/* -------------------- Bem-Vindo -------------------- */
+#bem-vindo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 500px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.texto-section3 {
+    justify-content: center;
+    width: 35%;
+    min-width: 200px;
+    margin-bottom: 100px;
+    padding-left: 20px;
+    border-radius: 16px;
+    line-height: 1.6em;
+    font-size: 1.8rem;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Ajustes específicos para o layout na seção #bem-vindo */
+#bem-vindo .texto-section3 {
+    width: 60%;
+    min-width: 260px;
+    text-align: left;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#bem-vindo .cadastro {
+    width: 35%;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+}
+
+/* Responsividade: empilha em telas pequenas */
+@media (max-width: 900px) {
+    #bem-vindo {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 16px;
+    }
+
+    #bem-vindo .texto-section3,
+    #bem-vindo .cadastro {
+        width: 100%;
+        min-width: unset;
+        align-items: center;
+        text-align: center;
+    }
+    #bem-vindo .cadastro { align-items: center; }
+}
+
+/* -------------------- QUEM SOMOS -------------------- */
+.texto-section2 {
+    width: 550px;
+    max-width: 90vw;
+    font-size: 1.2rem;
+    background: rgba(0,0,0,0.45);
+    padding: 25px;
+    border-radius: 16px;
+    line-height: 1.6em;
+}
+
+.img-right {
+    width: 500px;
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transition: transform .3s;
+}
+
+.img-right:hover {
+    transform: scale(1.03);
+}
+
+/* Linha divisória */
+#linha {
+    border: 1px solid white;
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* -------------------- LOJAS -------------------- */
+.section-flexlojas {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.texto-section4 {
+    width: 550px;
+    max-width: 90vw;
+    font-size: 1.2rem;
+    background: rgba(0,0,0,0.45); 
+    padding: 25px;
+    border-radius: 16px;
+    line-height: 1.6em;
+    margin: 0 auto;
+}
+
+.map_button {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.map_button:hover {
+    color: white;
+    transform: none;
+}
+
+.botão_mapa {
+    background-color: black;
+    color: white;
+    padding: 10px 4px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botão_mapa:hover {
+    background-color: #E65100;
+    transform: scale(1.1);
+}
+
+/* -------------------- FEEDBACKS -------------------- */
+.texto-section5 {
+    background: rgba(0,0,0,0.45);
+    text-align: center;
+    border-radius: 16px;
+    line-height: 1.6em;
+    margin: 0 auto;
+    padding: 5px;
+    width: 300px;
+}
+
+.feedbacks-simples {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-feedback {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    padding: 25px;
+    width: 320px;
+    border-left: 4px solid #FF8C00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-feedback h4 {
+    color: #FF8C00;
+    margin: 0 0 10px 0;
+}
+
+.card-feedback .estrelas {
+    color: #FFB84D;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.card-feedback p {
+    color: #ddd;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .feedbacks-simples {
+        gap: 15px;
+    }
+    .card-feedback {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+/* ================= FOOTER PROFISSIONAL ================= */
+#main-footer {
+    background-color: #0f0f0f;
+    border-top: 4px solid #FF8C00;
+    padding-top: 60px;
+    margin-top: 80px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px 40px;
+}
+
+/* Títulos das colunas */
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-left: 3px solid #FF8C00;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Coluna da Marca */
+.brand-col p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.footer-logo {
+    height: 50px;
+    opacity: 0.8;
+}
+
+/* Listas de Links e Info */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #FF8C00;
+    padding-left: 5px;
+}
+
+/* Ícones na lista de info */
+.info-list i {
+    color: #FF8C00;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Barra Inferior */
+.footer-bottom {
+    background: #050505;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.dev-credits span {
+    color: #FF8C00;
+    font-weight: bold;
+}
+
+/* Estilização: bloco 'cadastro' e botão */
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 10px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.cadastro p {
+    margin: 0;
+    font-weight: 600;
+    color: #f3f3f3;
+}
+
+.btn-cadastro {
+    display: inline-block;
+    background: linear-gradient(45deg, #ee1d23 0%, #ff8c00 100%);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    box-shadow: 0 8px 20px rgba(238,29,35,0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    border: none;
+}
+
+.btn-cadastro:hover,
+.btn-cadastro:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(255,140,0,0.18);
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .cadastro{ max-width: 100%; }
+    .btn-cadastro { width: 100%; text-align: center; padding: 14px; }
+}
+
+/* ⭐ HERO */
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hero-content {
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    pointer-events: all;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+.hero-content h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 20px 0;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------- MAPA -------------------- */
+.map-card {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.btn-mapa {
+    display: inline-block;
+    margin-top: 20px;
+    background: #ff6500;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-mapa:hover {
+    background: #ff4500;
+    transform: scale(1.05);
+}
+
+/* -------------------- RESPONSIVIDADE -------------------- */
+@media (max-width: 900px) {
+    .section-flex2 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .texto-section2 {
+        text-align: center;
+    }
+
+    .texto-section2 h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column h4 {
+        border-left: none;
+        border-bottom: 2px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .texto-section3 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-flex, .section-flex2 {
+        padding: 20px 10px;
+    }
+
+    .texto-section2,
+    .texto-section3,
+    .texto-section4 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: 10px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Uniformizar campos de formulário */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 8px 0 16px 0;
+    outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #FF8C00;
+    box-shadow: 0 4px 18px rgba(255,140,0,0.08);
+}
+
+/* Remover estilos de autofill do Chrome/Edge */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,0.03) inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Global: todos os títulos h2 em cor do site */
+h2 {
+    color: #FF8C00;
+}
+
+
+
