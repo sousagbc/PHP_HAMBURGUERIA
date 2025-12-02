@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             if ($stmt->execute([$nome, $email, $telefone, $senhaHash, $endereco])) {
                 $sucesso = "Cadastro realizado com sucesso! Redirecionando...";
-                header("refresh:3;url=index.php"); // Redireciona após 3 segundos
+                header("refresh:3;url=login.php"); // Redireciona após 3 segundos
             } else {
                 $erro = "Erro ao cadastrar. Tente novamente.";
             }
@@ -109,11 +109,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   </main>
 
-  <footer id="main-footer">
-      <div class="footer-bottom">
-          <p>&copy; 2025 O Burguês. Todos os direitos reservados.</p>
-      </div>
-  </footer>
+    <footer id="main-footer">
+        <div class="footer-content">
+            <div class="footer-column brand-col">
+                <img src="images/logo.png" alt="Logo Rodapé" class="footer-logo">
+                <p>O sabor que conquistou o Brasil. Hambúrguer artesanal feito de verdade.</p>
+            </div>
+
+            <div class="footer-column links-col">
+                <h4>NAVEGAÇÃO</h4>
+                <ul>
+                    <li><a href="index.php">Início</a></li>
+                    <li><a href="cardapio.php">Cardápio</a></li>
+                    <li><a href="index.php/#lojas">Encontre uma Loja</a></li>
+                    <li><a href="criar_pedido.php">Seu Pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column info-col">
+                <h4>FUNCIONAMENTO</h4>
+                <ul class="info-list">
+                    <li><i class="fa-regular fa-clock"></i> Seg - Dom: 18h às 23h</li>
+                    <li><i class="fa-solid fa-location-dot"></i> João Pessoa - PB</li>
+                    <li><i class="fa-solid fa-envelope"></i> contato@oburgues.com.br</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 O Burguês. Todos os direitos reservados.</p>
+            <p class="dev-credits">Desenvolvido por <span>Grupo TechBurger</span></p>
+        </div>
+    </footer>
 
 </body>
 </html>

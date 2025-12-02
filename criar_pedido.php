@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'conexao.php';
 
 // Processamento do Formulário
@@ -58,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="pedidos.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -88,7 +90,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <form method="post">
         
         <label for="cliente">Nome do Cliente:</label>
-        <input type="text" name="cliente" id="cliente" placeholder="Ex: João Silva" required>
+        <input type="text" 
+        name="cliente" 
+        id="cliente" placeholder="Ex: João Silva" required 
+        value="<?= isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '' ?>" 
+       <?= isset($_SESSION['usuario_nome']) ? 'readonly' : '' ?>>
 
         <div class="section-title"><i class="fa-solid fa-drumstick-bite"></i> Escolha o Hambúrguer</div>
         <select name="hamburguer" id="hamburguer">
@@ -167,5 +173,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="dev-credits">Desenvolvido por <span>Grupo TechBurger</span></p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1000, /* Duração da animação em ms */
+        once: true      /* Anima apenas uma vez ao descer */
+    });
+</script>
 </body>
 </html>
