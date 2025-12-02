@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21/11/2025 às 20:14
+-- Tempo de geração: 02/12/2025 às 04:50
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -24,6 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(20) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `endereco` text DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nome`, `email`, `telefone`, `senha`, `endereco`, `created_at`) VALUES
+(1, 'Pedro', 'pedromeireles119@gmail.com', '83986652553', '$2y$10$4sunglZ1jBIP5ZZWovTEPevtrJ1096l5FjCjQhXMnylDy4aVFkRdi', 'Rua Enfermeira Ana Maria Barbosa de Almeida, 114', '2025-12-02 00:09:53');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `pedidos`
 --
 
@@ -37,15 +60,15 @@ CREATE TABLE `pedidos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `pedidos`
---
-
-INSERT INTO `pedidos` (`id`, `cliente`, `item`, `quantidade`, `status`, `created_at`) VALUES
-(1, 'phpgay', 'combo 2', 1, 'pendente', '2025-11-21 15:42:43');
-
---
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Índices de tabela `pedidos`
@@ -58,10 +81,16 @@ ALTER TABLE `pedidos`
 --
 
 --
+-- AUTO_INCREMENT de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
