@@ -70,7 +70,7 @@ $pedidos = $stmt->fetchAll();
             </p>
         </div>
         <div class="cadastro">
-            <a href="#quem-somos" class="btn-cadastro">CADASTRE-SE AQUI</a>
+            <a href="cadastro.php" class="btn-cadastro">CADASTRE-SE AQUI</a>
         </div>
     </section>
 
