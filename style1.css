@@ -690,7 +690,7 @@ textarea {
     padding: 12px 14px;
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.12);
-    color: #fff;
+    color: #ccc;
     border-radius: 10px;
     font-size: 1rem;
     margin: 8px 0 16px 0;
@@ -707,7 +707,7 @@ textarea:focus {
 /* Remover estilos de autofill do Chrome/Edge */
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-    -webkit-text-fill-color: #ffffff !important;
+    -webkit-text-fill-color: #050505 !important;
     -webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,0.03) inset !important;
     transition: background-color 5000s ease-in-out 0s;
 }
