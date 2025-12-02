@@ -1,4 +1,5 @@
 <?php
+
 // admin/index.php
 ?>
 <!DOCTYPE html>
@@ -18,6 +19,7 @@
 <h1>Painel Administrativo</h1>
 
 <a href="pedidos.php">Gerenciar Pedidos</a>
+<a href="clientes.php">Gerenciar Clientes</a>
 
 </body>
 </html>
