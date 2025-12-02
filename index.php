@@ -14,7 +14,7 @@ $pedidos = $stmt->fetchAll();
 
     <!-- NOTE: aqui estou usando o caminho do arquivo enviado no container -->
     <link rel="icon" href="images/logo.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       /* Ajustes pequenos para a tabela de pedidos se necessário */
